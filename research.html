@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0%;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-around;
+            gap: 0.8vw;
+            align-items: flex-start;
+            /* position:relative; */
+            height: 7.9vh;
+            /* border: 1px solid black; */
+            /* top:5px; */
+            padding: 1vh 0;
+            /* background-color: #d5d5db; */
+            background-color: #01263c;
+
+        }
+
+        .navbar img {
+            overflow: hidden;
+            height: 7vh;
+            width: 7vw;
+            margin-left: 0.5vw;
+            opacity: 0.9;
+            z-index: 1;
+            /* background-color: white; */
+        }
+
+        .navbar a {
+            /* float:left; */
+            font: 16px "Titillium web", sans-serif;
+            font-weight: 500;
+            /* font-size:2vh; */
+            /* font-weight: 600; */
+            color: #fff;
+            text-align: center;
+            padding: 19px 3px;
+            text-decoration: none;
+            z-index: 1;
+        }
+
+        .dropdown {
+
+            /* float: right; */
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font: 16px "Titillium web", sans-serif;
+            font-weight: 500;
+            color: #fff;
+            /* font-size:2vh;
+    font-weight: 600; */
+            z-index: 1;
+            border: none;
+            outline: none;
+            /* color: rgb(50, 48, 48); */
+            padding: 19px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: white;
+            color: blue;
+            border-radius: 2px;
+        }
+
+        .dropdown-content {
+            display: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            position: absolute;
+            background: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            /*opacity: 0.7; */
+        }
+
+        .dropdown-main a {
+            float: none;
+            color: blue;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: #01263c;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-main {
+            display: flex;
+            height: 50vh;
+            width: 100%;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+
+
+
+        .c1 {
+            text-align: start;
+            padding: 0% 10%;
+            line-height: 4vh;
+
+        }
+
+        table {
+            border-collapse: collapse;
+
+
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+        }
+
+        img {
+            width: 20%;
+            height: 20%;
+        }
+
+        footer {
+            /* margin-top: 2vh; */
+            text-align: center;
+            background-color: #01263c;
+            color: #ddd;
+        }
+
+        footer div {
+            font-size: 15px;
+            font-weight: 500;
+            padding: 1vh 0;
+        }
+
+        .username {
+            position: absolute;
+            top: 0.5vh;
+            right: 10px;
+            gap: 5px;
+            color: turquoise;
+        }
+
+        .user-text {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <img src="asserts/image/logo.png" alt="logo">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">About us
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main" id="content"><a href="company_info.html">Company Information</a>
+                        <a href="m&v.html">Mission & Vision</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Product & Services
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="Product.html">Products</a>
+                        <a href="#link2">Link 2</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Research & Development
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main"> <a href="research.html">Research</a>
+                        <a href="project.html">Projects</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Quality & Services
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="certification.html">Quality Standard</a>
+                        <a href="#link2">Link 2</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Careers
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="job opening.html">Job Openings</a>
+                        <a href="internship.html">Internship</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 4</a>
+                        <a href="#link3">Link 5</a>
+                        <a href="#link3">Link 6</a>
+                        <a href="#link3">Link 7</a>
+                        <a href="#link3">Link 8</a>
+                    </div>
+                </div>
+            </div>
+            <a href="staff_directory.html">Staff Directory</a>
+            <a href="gallery.html">Gallery</a>
+            <div class="dropdown">
+                <button class="dropbtn">Contact us
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="customer.html">Customer Support</a>
+                        <a href="location.html">HAL Factory Map</a>
+                        <a href="complaint.html">Complaint Section</a>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html">Log out</a>
+            <div class="username">Username: <div class="user-text"></div>
+            </div>
+        </div>
+
+    </header>
+
+
+
+
+    <section>
+        <div class="c1">
+            <h1>Hindustan Aeronautics Limited (HAL)</h1>
+            <p>Hindustan Aeronautics Limited (HAL) is a prominent Indian public sector aerospace and defence company
+                headquartered in Bangalore. Established in 1940, HAL is distinguished as one of the oldest and largest
+                aerospace and defence manufacturers globally. Presently, HAL operates 11 dedicated Research and
+                Development
+                (R&D) centres and 21 manufacturing divisions across four production units spread throughout India.
+
+                It is managed by a board of directors appointed by the President of India , acting through the Ministry
+                of
+                Defence, Government of India.</p>
+
+            <h2>Evolution of HAL</h2>
+            <p>Hindustan Aeronautics Limited (HAL), established in Bangalore on December 23, 1940, by Shri Walchand
+                Hirachand in collaboration with the Government of Mysore, HAL's primary objective was the indigenous
+                production of aircraft.</p>
+        </div>
+
+        <div class="c1">
+            <ul>
+                <li>
+                    <strong>Early Years of HAL:</strong> In 1942, the Government of India became a shareholder,
+                    eventually
+                    assuming full
+                    management control.
+                    <ul>
+                        <li>In 1942, the Government of India became a shareholder, eventually assuming
+                            full management control.</li>
+                        <li>These ventures laid the foundation for India's aeronautics sector.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li><strong>Innovations and Diversification:</strong> Innovation remained a cornerstone of HAL's
+                    journey, giving rise to
+                    several aircraft
+                    <ul>
+                        <li>For example, 'Pushpak' for flying clubs, 'Krishak' for Air Observatory Post (AOP) role,
+                            HF-24
+                            Jet Fighter ('Marut'), and the HJT-16 Basic Jet Trainer ('Kiran').</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li><strong>Later Developments:</strong>
+                    <ul>
+                        <li>In the 1960s and 1970s, HAL diversified its operations, leading to the establishment of
+                            Aeronautics India Limited (AIL) for the licensed production of MiG-21 aircraft.</li>
+                        <li>This eventually culminated in the amalgamation of Hindustan Aircraft Limited and Aeronautics
+                            India Limited, giving birth to "Hindustan Aeronautics Limited (HAL)" on October 1, 1964.
+                        </li>
+                        <li>HAL's contributions extended beyond aircraft manufacturing and played an active role in
+                            supporting India's space programs. It established an aerospace division in 1988, which
+                            became
+                            instrumental in supplying critical components for ISRO's launch vehicles and satellites.
+                        </li>
+                        <li>HAL ventured into gas turbine engines with the creation of the Industrial & Marine Gas
+                            Turbine
+                            Division in 1998.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li><strong>Recent Developments</strong>
+                    <ul>
+                        <li>In recent years, HAL has pushed its boundaries with the establishment of the Light Combat
+                            Aircraft (LCA) Tejas Division in 2014, indicating its dedication to indigenous innovation.
+                        </li>
+                        <li>This initiative promises to revolutionize the modernisation efforts of the Indian Defence
+                            Services.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li> Today, HAL stands as a global leader in the Aerospace and Defence Industry, shaping the future of
+                    aviation and bolstering national security.
+
+                    R&D Centres of HA</li>
+            </ul>
+        </div>
+
+
+        <div class="c1">
+            <table>
+                <tr>
+                    <th>column-1</th>
+                    <th>column-2</th>
+                </tr>
+
+                <tr>
+                    <td>Light Combat Aircraft (LCA)</td>
+                    <td>This is India's first domestically designed and manufactured supersonic fighter aircraft. For
+                        example: Tejas.
+
+                        <img src="asserts/image/LCA_tejas_f561141d50.webp" alt="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Light Combat Helicopter (LCH)</td>
+                    <td>
+
+                        The LCH is another indigenous project aimed at meeting the combat helicopter requirements of the
+                        Indian Armed Forces. For example: Dhruv, Prachand (an improvement on previous helicopters).
+                        <img src="asserts/image/LCH_dhruv_and_prachand_helicopter_924c5bd4e5.webp" alt="">
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Basic Turboprop Trainer HTT-40</td>
+                    <td> The HTT-40 is a trainer aircraft designed to meet the basic training requirements of the Indian
+                        Air Force.</td>
+                </tr>
+
+                <tr>
+                    <td>Indian Multi-Role Helicopter (IMRH)</td>
+                    <td>
+
+                        - It is focused on designing and manufacturing a versatile and multi-role helicopter for various
+                        defence and civilian applications. For example, HLFT-42.
+
+
+                        IMRH is expected to replace the ageing fleets of Russia-origin military helicopters (Mi-17s).
+                        <img src="asserts/image/IMRH_hlft_42_39e8623e99.webp" alt="">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Jaguar DARIN-III Upgrade</td>
+                    <td>
+
+                        This project involves upgrading the existing Jaguar aircraft to the DARIN-III standard,
+                        enhancing their operational capabilities.
+                        <img src="asserts/image/jaguar_darin_III_2164bc5bc8.webp" alt="">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Mirage Upgrade</td>
+                    <td>
+
+                        This project involves modernizing the Mirage aircraft to enhance their performance and extend
+                        their operational lifespan.
+                        <img src="asserts/image/MIRAGE_2000_ec6a8f0862.webp" alt="">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Hawk-i</td>
+                    <td>It is an upgraded version of the Hawk Advanced Jet Trainer to provide trainee pilots with a more
+                        realistic and comprehensive training experience
+                        <img src="asserts/image/HAWK_i_c1a6ce61cc.webp" alt="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Aircraft Display Systems</td>
+                    <td>These advanced Aircraft Display Systems play a crucial role in providing pilots with essential
+                        information during flight.</td>
+                </tr>
+
+                <tr>
+                    <td>Mission Computers</td>
+                    <td>These are critical components in modern aircraft for processing and managing mission-critical
+                        data.</td>
+                </tr>
+            </table>
+        </div>
+
+
+    </section>
+    <footer>
+        <div>&copy; HAL Avionics Korwa </div>
+    </footer>
+    <script>
+        let user = document.querySelector('.username');
+        let user1 = document.querySelector('.user-text');
+        user.style.display = "flex"
+        user1.textContent = "Sagar";
+    </script>
+</body>
+
+</html>

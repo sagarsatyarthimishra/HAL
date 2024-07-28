@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-around;
+      gap: 0.8vw;
+      align-items: flex-start;
+      /* position:relative; */
+      height: 7.9vh;
+      /* border: 1px solid black; */
+      /* top:5px; */
+      padding: 1vh 0;
+      /* background-color: #d5d5db; */
+      background-color: #01263c;
+
+    }
+
+    .navbar img {
+      overflow: hidden;
+      height: 7vh;
+      width: 7vw;
+      margin-left: 0.5vw;
+      opacity: 0.9;
+      z-index: 1;
+      /* background-color: white; */
+    }
+
+    .navbar a {
+      /* float:left; */
+      font: 16px "Titillium web", sans-serif;
+      font-weight: 500;
+      /* font-size:2vh; */
+      /* font-weight: 600; */
+      color: #fff;
+      text-align: center;
+      padding: 19px 3px;
+      text-decoration: none;
+      z-index: 1;
+    }
+
+    .dropdown {
+
+      /* float: right; */
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font: 16px "Titillium web", sans-serif;
+      font-weight: 500;
+      color: #fff;
+      /* font-size:2vh;
+    font-weight: 600; */
+      z-index: 1;
+      border: none;
+      outline: none;
+      /* color: rgb(50, 48, 48); */
+      padding: 19px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: white;
+      color: blue;
+      border-radius: 2px;
+    }
+
+    .dropdown-content {
+      display: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      position: absolute;
+      background: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      /*opacity: 0.7; */
+    }
+
+    .dropdown-main a {
+      float: none;
+      color: blue;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+      color: #01263c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-main {
+      display: flex;
+      height: 50vh;
+      width: 100%;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+
+    p {
+      padding: 0vh 3vh 0 3vh;
+    }
+
+    h1 {
+      padding: 1vh;
+    }
+
+    h2 {
+      padding: 1vh;
+    }
+
+    table {
+      /* background: #000; */
+      position: relative;
+      top: 1vh;
+      left: 1.5vw;
+      border-collapse: collapse;
+      width: 97%;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    th {
+      background-color: rgb(151, 149, 149);
+    }
+
+    td,
+    th {
+      border: 1px solid black;
+      text-align: left;
+      padding: 8px;
+
+    }
+
+    .username {
+      position: absolute;
+      top: 0.5vh;
+      right: 10px;
+      gap: 5px;
+      color: turquoise;
+    }
+
+    .user-text {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <!-- <img src="asserts/image/header_HAL_logo.png" alt=""> -->
+      <div class="navbar">
+        <img src="asserts/image/logo.png" alt="logo">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">About us
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main" id="content"><a href="company_info.html">Company Information</a>
+              <a href="m&v.html">Mission & Vision</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Product & Services
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main">
+              <a href="Product.html">Products</a>
+              <a href="#link2">Link 2</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Research & Development
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main"> <a href="research.html">Research</a>
+              <a href="project.html">Projects</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Quality & Services
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main">
+              <a href="certification.html">Quality Standard</a>
+              <a href="#link2">Link 2</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Careers
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main">
+              <a href="job opening.html">Job Openings</a>
+              <a href="internship.html">Internship</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 4</a>
+              <a href="#link3">Link 5</a>
+              <a href="#link3">Link 6</a>
+              <a href="#link3">Link 7</a>
+              <a href="#link3">Link 8</a>
+            </div>
+          </div>
+        </div>
+        <a href="staff_directory.html">Staff Directory</a>
+        <a href="gallery.html">Gallery</a>
+        <div class="dropdown">
+          <button class="dropbtn">Contact us
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main">
+              <a href="customer.html">Customer Support</a>
+              <a href="location.html">HAL Factory Map</a>
+              <a href="complaint.html">Complaint Section</a>
+            </div>
+          </div>
+        </div>
+        <a href="index.html">Log out</a>
+        <div class="username">Username: <div class="user-text"></div>
+        </div>
+      </div>
+    </header>
+    <section>
+
+      <div id="div1">
+        <h1>Company Information</h1>
+        <p>Hindustan Aeronautics Limited (HAL) is an Indian public sector aerospace and defence company,
+          headquartered in Bangalore. Established on 23 December 1940, HAL is one of the oldest and largest
+          aerospace and defence manufacturers in the world.[6] HAL began aircraft manufacturing as early as
+          1942 with licensed production of Harlow PC-5, Curtiss P-36 Hawk and Vultee A-31 Vengeance for the
+          Indian Air Force.[6] HAL currently has 11 dedicated Research and development (R&D) centres and 21
+          manufacturing divisions under 4 production units spread across India.[6] HAL is managed by a board
+          of directors appointed by the President of India through the Ministry of Defence, Government of
+          India.[7] HAL is currently involved in designing and manufacturing of fighter jets, helicopters, jet
+          engine and marine gas turbine engine, avionics, software development, spares supply, overhauling and
+          upgrading of Indian military aircraft.[8]
+
+          The HAL HF-24 Marut fighter-bomber was the first indigenous fighter aircraft made in India.</p>
+      </div>
+      <div id="div2">
+        <h2>Centres</h2>
+        <table>
+          <tr>
+            <th>SR</th>
+            <th>Centres</th>
+            <th>Activity</th>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>Aircraft R&D Centre, Bangalore</td>
+            <td>Design and Development of Fixed Wing aircraft (LCA, IJT, UAV, HTT-40)</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Rotary Wing Aircraft R&D Centre, Bangalore</td>
+            <td>Design and Development of Rotary Wing aircraft (LCH, LUH, IMRH, RUAV)</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Missin & Combat System R&D Centre, Bangalore</td>
+            <td>Mission systems, Aircraft upgrades and technology development</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Aero Engine R&d Centre,Bangalore</td>
+            <td> Small, Medium Engines & Test Bed design(HTFE 25 KN, HTSE 1200 KW)</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Strategic Electronics R&D Centre, Hyderabad</td>
+            <td>Avionics Items.</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Transport Aircraft R&D Centre, Kanpur</td>
+            <td>Development & Modification/ upgrades of Transport Aircraft</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td> Aircraft Upgrades R&D Centre, Nasik</td>
+            <td>Aircraft/ System Upgrade Work on Russian Aircraft</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Aerospace Systems & Equipment R&D Centre, Lucknow</td>
+            <td>Development of Mechanical, Hydraulic and Electrical accessories.</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td> Gas Turbine R&D Centre, Koraput</td>
+            <td>Design Improvement of Russian Engines</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Central Materials & Processes Laboratory & NDT Centre, Bangalore</td>
+            <td>Development of Materials, Castings, Forgings & New Processes</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Aerospace Systems & Equipment R&D Centre, Korwa</td>
+            <td> Developing Flight Data Recorders & Display Systems.</td>
+          </tr>
+
+        </table>
+      </div>
+    </section>
+  </main>
+  <script>
+    let user = document.querySelector('.username');
+    let user1 = document.querySelector('.user-text');
+    user.style.display = "flex"
+    user1.textContent = "Sagar";
+  </script>
+</body>
+
+</html>

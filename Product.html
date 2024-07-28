@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               font-family: "Roboto", sans-serif;
+          }
+
+          .navbar {
+               overflow: hidden;
+               background-color: transparent;
+               display: flex;
+               justify-content: space-around;
+               gap: 0.8vw;
+               align-items: flex-start;
+               /* position:relative; */
+               height: 7.9vh;
+               /* border: 1px solid black; */
+               /* top:5px; */
+               padding: 1vh 0;
+               /* background-color: #d5d5db; */
+               background-color: #01263c;
+
+          }
+
+          .navbar img {
+               overflow: hidden;
+               height: 7vh;
+               width: 7vw;
+               margin-left: 0.5vw;
+               opacity: 0.9;
+               z-index: 1;
+               /* background-color: white; */
+          }
+
+          .navbar a {
+               /* float:left; */
+               font: 16px "Titillium web", sans-serif;
+               font-weight: 500;
+               /* font-size:2vh; */
+               /* font-weight: 600; */
+               color: #fff;
+               text-align: center;
+               padding: 19px 3px;
+               text-decoration: none;
+               z-index: 1;
+          }
+
+          .dropdown {
+
+               /* float: right; */
+               overflow: hidden;
+          }
+
+          .dropdown .dropbtn {
+               font: 16px "Titillium web", sans-serif;
+               font-weight: 500;
+               color: #fff;
+               /* font-size:2vh;
+    font-weight: 600; */
+               z-index: 1;
+               border: none;
+               outline: none;
+               /* color: rgb(50, 48, 48); */
+               padding: 19px 16px;
+               background-color: inherit;
+               font-family: inherit;
+               margin: 0;
+          }
+
+          .navbar a:hover,
+          .dropdown:hover .dropbtn {
+               background-color: white;
+               color: blue;
+               border-radius: 2px;
+          }
+
+          .dropdown-content {
+               display: none;
+               border-bottom-left-radius: 5px;
+               border-bottom-right-radius: 5px;
+               position: absolute;
+               background: white;
+               min-width: 160px;
+               box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+               z-index: 1;
+               /*opacity: 0.7; */
+          }
+
+          .dropdown-main a {
+               float: none;
+               color: blue;
+               padding: 12px 16px;
+               text-decoration: none;
+               display: block;
+               text-align: left;
+          }
+
+          .dropdown-content a:hover {
+               background-color: #ddd;
+               color: #01263c;
+          }
+
+          .dropdown:hover .dropdown-content {
+               display: block;
+          }
+
+          .dropdown-main {
+               display: flex;
+               height: 50vh;
+               width: 100%;
+               flex-direction: column;
+               flex-wrap: wrap;
+          }
+
+
+          header {
+               text-align: center;
+          }
+
+          header h1 {
+               font-weight: 600;
+          }
+
+          h2 {
+               text-align: center;
+               font-weight: 600;
+               padding-top: 1vh;
+               border-top: 1px solid black;
+          }
+
+          .sub {
+               display: flex;
+               width: 80%;
+               justify-content: space-between;
+               box-shadow: rgb(225, 224, 224) 10px 15px 80px 5px;
+               margin: 2vh 10vw
+          }
+
+          .sub h4 {
+               margin: 2vh 0 0 2vw;
+               /* text-align: center; */
+          }
+
+          .sub p {
+               padding: 2vh;
+               line-height: 3vh;
+               text-align: center;
+          }
+
+          img {
+               height: 100%;
+               width: 200px;
+               overflow: hidden;
+               border: 1px solid rgb(48, 44, 44);
+          }
+
+          h1,
+          h2,
+          p {
+               font-family: 'Roboto', sans-serif;
+          }
+
+          footer {
+               /* margin-top: 2vh; */
+               text-align: center;
+               background-color: #01263c;
+               color: #ddd;
+          }
+
+          footer div {
+               font-size: 15px;
+               font-weight: 500;
+               padding: 1vh 0;
+          }
+
+          .username {
+               position: absolute;
+               top: 0.5vh;
+               right: 10px;
+               gap: 5px;
+               color: turquoise;
+          }
+
+          .user-text {
+               color: white;
+          }
+     </style>
+</head>
+
+<body>
+     <main>
+          <header>
+               <div class="navbar">
+                    <img src="asserts/image/logo.png" alt="logo">
+                    <a href="index.html">Home</a>
+                    <div class="dropdown">
+                         <button class="dropbtn">About us
+                              <i class="fa fa-caret-down"></i>
+                         </button>
+                         <div class="dropdown-content">
+                              <div class="dropdown-main" id="content"><a href="company_info.html">Company
+                                        Information</a>
+                                   <a href="m&v.html">Mission & Vision</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="dropdown">
+                         <button class="dropbtn">Product & Services
+                              <i class="fa fa-caret-down"></i>
+                         </button>
+                         <div class="dropdown-content">
+                              <div class="dropdown-main">
+                                   <a href="Product.html">Products</a>
+                                   <a href="#link2">Link 2</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="dropdown">
+                         <button class="dropbtn">Research & Development
+                              <i class="fa fa-caret-down"></i>
+                         </button>
+                         <div class="dropdown-content">
+                              <div class="dropdown-main"> <a href="research.html">Research</a>
+                                   <a href="project.html">Projects</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="dropdown">
+                         <button class="dropbtn">Quality & Services
+                              <i class="fa fa-caret-down"></i>
+                         </button>
+                         <div class="dropdown-content">
+                              <div class="dropdown-main">
+                                   <a href="certification.html">Quality Standard</a>
+                                   <a href="#link2">Link 2</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 3</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="dropdown">
+                         <button class="dropbtn">Careers
+                              <i class="fa fa-caret-down"></i>
+                         </button>
+                         <div class="dropdown-content">
+                              <div class="dropdown-main">
+                                   <a href="job opening.html">Job Openings</a>
+                                   <a href="internship.html">Internship</a>
+                                   <a href="#link3">Link 3</a>
+                                   <a href="#link3">Link 4</a>
+                                   <a href="#link3">Link 5</a>
+                                   <a href="#link3">Link 6</a>
+                                   <a href="#link3">Link 7</a>
+                                   <a href="#link3">Link 8</a>
+                              </div>
+                         </div>
+                    </div>
+                    <a href="staff_directory.html">Staff Directory</a>
+                    <a href="gallery.html">Gallery</a>
+                    <div class="dropdown">
+                         <button class="dropbtn">Contact us
+                              <i class="fa fa-caret-down"></i>
+                         </button>
+                         <div class="dropdown-content">
+                              <div class="dropdown-main">
+                                   <a href="customer.html">Customer Support</a>
+                                   <a href="location.html">HAL Factory Map</a>
+                                   <a href="complaint.html">Complaint Section</a>
+                              </div>
+                         </div>
+                    </div>
+                    <a href="index.html">Log out</a>
+                    <div class="username">Username: <div class="user-text"></div>
+                    </div>
+               </div>
+               <h1>-: PRODUCTS :-</h1>
+               <p>AD Korwa Division is engaged in the manufacturing & repairing of various Avionics Systems for fitment
+                    on
+                    different Western, Indigenous & Russian origin aircraft platforms. </p>
+          </header>
+          <section>
+               <div id="pd1">
+                    <h2>~~RECORDER SYSTEM~~</h2>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>Solid State Flight Data Recorder/ Solid State Cockpit Voice & Data Recorder
+                                   (SSFDR/CVFDR ) –
+                                   MIL/ CIVIL
+                                   CERTIFIED</h4>
+                              <p> Used to record critical flight parameters and voice for post flight analysis. Its
+                                   variants are
+                                   MIL / CIVIL
+                                   certified. The SSFDR/CVFDR is developed for both Fixed & rotary Wing platforms.</p>
+                         </div>
+                         <div><img src="asserts/image/344_ParaS_SSFDR.jpg" alt="image"></div>
+                    </div>
+
+                    <!-- sub2 -->
+                    <div class="sub">
+                         <div>
+                              <h4>Deployable FDR</h4>
+                              <p>Deployable Flight Data Recorder is combination of CVR, FDR, and ELT fitted in buoyant
+                                   hardened
+                                   container with deployable mechanism. It is capable of automatically deploying from
+                                   aircraft in
+                                   event of aircraft accident. Once deployed, it begins continuously transmit its GPS
+                                   location &
+                                   identification at the emergency frequency 406 MHz and 121.5 MHz. Its unique structure
+                                   enable it
+                                   to float on water indefinitely in event of accident on water. It is suitable for
+                                   aircraft and
+                                   helicopter flying over sea area.</p>
+                         </div>
+                         <div><img src="asserts/image/735_ParaS_DeployableFDR.jpg" alt="image"></div>
+                    </div>
+                    <!-- sub3 -->
+                    <div class="sub">
+                         <div>
+                              <h4>Enhanced FDR</h4>
+                              <p>The Enhanced FDR can record more parameter as compared to conventional Flight Data
+                                   Recorders. It
+                                   possess high capacity compact Protect Memory Module (PMM).</p>
+                         </div>
+                         <div><img src="asserts/image/736_ParaS_EFDR.png" alt="image"></div>
+                    </div>
+
+
+               </div>
+
+
+               <div id="pd2">
+                    <h2>~~Display System~~</h2>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>Multi-Function Display (MFD) </h4>
+                              <p>Multi-Function Display (MFD) provides the pilot with high resolution symbology overlaid
+                                   on a
+                                   video image coming from DMG and other interface systems. The MFD is built around a
+                                   full high
+                                   resolution, high contrast Active Matrix Liquid Crystal Display (AMLCD) device,
+                                   allowing pilot
+                                   to see the display image even under a high ambient light. It has high MTBF, 4 times
+                                   in
+                                   comparison to CRT. It displays video images coming from video sources such as RADAR,
+                                   FLIR,
+                                   OPTRONICS and Digital Map Generator.provides the pilot with high resolution symbology
+                                   overlaid
+                                   on a video image coming from DMG and other interface systems. The MFD is built around
+                                   a full
+                                   high resolution, high contrast Active Matrix Liquid Crystal Display (AMLCD) device,
+                                   allowing
+                                   pilot to see the display image even under a high ambient light. It has high MTBF, 4
+                                   times in
+                                   comparison to CRT. It displays video images coming from video sources such as RADAR,
+                                   FLIR,
+                                   OPTRONICS and Digital Map Generator.</p>
+                         </div>
+                         <div><img src="asserts/image/740_ParaS_MFD.png" alt="image"></div>
+                    </div>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>Pilot Control Unit (PCU-II)</h4>
+                              <p>Pilot Control Unit (PCU-II) is Human Machine Interface (HMI) of Automatic Flight
+                                   Control System
+                                   (AFCS). It provides interface between crew and AFCS.</p>
+                         </div>
+                         <div><img src="asserts/image/741_ParaS_PCU.jpg" alt="image"></div>
+                    </div>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>Engine & Flight Display Unit (EFDU)</h4>
+                              <p>Engine & Flight Display Unit (EFDU) is LCD display for EFIS system. It displays Air
+                                   Data,
+                                   Attitude, Heading information, Engine, fuel and hydraulic parameters information.
+                                   EFIS is also
+                                   integrated with avionics system through MIL 1553B bus.
+                              <p>
+                         </div>
+                         <div><img src="asserts/image/742_ParaS_EFDU.jpg" alt="image"></div>
+                    </div>
+               </div>
+
+               <div id="pd3">
+                    <h2>~~NAVIGATION SYSTEM~~</h2>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>Inertial Navigation & Positing System(INGPS)</h4>
+                              <p>Inertial navigation is a process which allows a vehicle to locate itself in space
+                                   (position,
+                                   speed and attitude). INGPS is based on “strap-down” navigation systems. In such
+                                   systems, all
+                                   output values are calculated based on information delivered by the angular rotation
+                                   (Ring Laser
+                                   gyros) and linear acceleration (accelerometers) detectors. GPS Information is used to
+                                   compensate the effect of inertial parameters drift, in order to compute optimal
+                                   navigation
+                                   data. The INS/GPS (Inertial Navigation System/ Global Positioning System) SIGMA 95 is
+                                   a Strap
+                                   down Inertial Navigation Unit (INU) based on Ring Laser Gyro, accelerometers and GPS
+                                   receiver.
+                                   It is licensed from M/s Sagem France now M/s Safran Defence & Electronics, France.
+                              </p>
+                         </div>
+                         <div><img src="asserts/image/749_ParaS_INGPS.png" alt="image"></div>
+                    </div>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>GPS GLONASS GAGAN Inertial Navigation System(G3INS)</h4>
+                              <p> An indigenous inertial system with an embedded GPS receiver that provides aircraft
+                                   peripheral
+                                   equipment with all necessary inertial inputs. The indigenous navigation system is
+                                   compatible
+                                   with GPS, GLONASS & GAGAN. The system has the option of added IRNSS capability also.
+                              </p>
+                         </div>
+                         <div><img src="asserts/image/750_ParaS_G3INS.jpg" alt="image"></div>
+                    </div>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>INERTIAL MEASURING BLOCK</h4>
+                              <p>INERTIAL MEASURING BLOCK is meant for determining and sending of components of linear
+                                   acceleration( aX, aY, aZ) and components of absolute angular speed (wX, wY, wZ )
+                                   along mutually
+                                   perpendicular axes of the aircraft in flight (with X- axis directed along the
+                                   longitudinal axis
+                                   of aircraft) for positioning of RADAR antenna. The unit has two dry tuned gyroscopes
+                                   and three
+                                   numbers of servo accelerometers.</p>
+                         </div>
+                         <div><img src="asserts/image/752_ParaS_IMB.png" alt="image"></div>
+                    </div>
+
+               </div>
+
+
+               <div id="pd3">
+                    <h2>~~PROCESSORS & COMPUTERS~~</h2>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>I-DGM</h4>
+                              <p>Indigenous Digital Map Generator is Digital Map Generator is being used for generation
+                                   of Digital
+                                   Map to be displayed on MFD. It superimposes symbology over digitized map.</p>
+                         </div>
+                         <div><img src="asserts/image/754_ParaS_IDMG.jpg" alt="image"></div>
+                    </div>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>INTERFACE COMPUTER</h4>
+                              <p>Mission Management System consists of Interface Computer (IC), Display Computers (DC-
+                                   2no’s) and
+                                   displays. The Interface Computer unit interfaces between Aircraft systems and Display
+                                   Computers
+                                   for collection & distribution of data. The IC unit is a real-time OS based airborne
+                                   computer.
+                              </p>
+                         </div>
+                         <div><img src="asserts/image/755_ParaS_INTERFACECOMP.jpg" alt="image"></div>
+                    </div>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>AUTOSTAB</h4>
+                              <p>The Auto Stabilizer improves the handling characteristics of the basic aircraft by
+                                   providing
+                                   damping inputs to the control surfaces for additional stability about the aircraft
+                                   pitch, roll
+                                   and yaw axis. It consists of five type of LRUs. The system consists of five type of
+                                   LRUs.</p>
+                         </div>
+                         <div><img src="asserts/image/756_ParaS_AUTOSTAB.jpg" alt="image"></div>
+                    </div>
+
+               </div>
+
+
+               <div id="pd3">
+                    <h2>~~OPTICAL & LASER SYSTEMS~~</h2>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>OLS</h4>
+                              <p>OLS system is mounted in the nose of the aircraft to provide accurate range of enemy
+                                   targets for
+                                   weapon delivery commutation, and forms an integral part of the attack system</p>
+                         </div>
+                         <div><img src="asserts/image/758_ParaS_OLS.png" alt="image"></div>
+                    </div>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <h4>LRMS</h4>
+                              <p>The Laser Ranger and Marked Target Seeker, LRMTS is a system mounted in the nose of the
+                                   aircraft to provide range of enemy targets for weapon delivery commutation, and forms
+                                   an integral part of the attack system. It has the facility to range targets sighted
+                                   by the pilot as well as unplanned targets, out of sight of pilot, but designated by a
+                                   ground laser designator.</p>
+                         </div>
+                         <div><img src="asserts/image/759_ParaS_LRMTS.png" alt="image"></div>
+                    </div>
+                    <!-- sub1 -->
+                    <div class="sub">
+                         <div>
+                              <div">
+                                   <h4>MULTI-MISSION OPTRONICS STABILISED PLATFORM(MOSP)</h4>
+                                   <p>It is an electro-optical payload which provides video images (during day or day
+                                        night) of
+                                        the targets with the capability of acquiring and tracking targets under varying
+                                        weather
+                                        and visibility conditions.</p>
+                         </div>
+                         <div><img src="asserts/image/760_ParaS_MOSP.png" alt="image"></div>
+                    </div>
+               </div>
+               </div>
+          </section>
+          <!-- footer -->
+          <footer>
+               <div>&copy; HAL Avionics Korwa</div>
+          </footer>
+     </main>
+     <script>
+          let user = document.querySelector('.username');
+          let user1 = document.querySelector('.user-text');
+          user.style.display = "flex"
+          user1.textContent = "Sagar";
+     </script>
+</body>
+
+</html>

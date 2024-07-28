@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0%;
+      margin: 0%;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-around;
+      gap: 0.8vw;
+      align-items: flex-start;
+      /* position:relative; */
+      height: 7.9vh;
+      /* border: 1px solid black; */
+      /* top:5px; */
+      padding: 1vh 0;
+      /* background-color: #d5d5db; */
+      background-color: #01263c;
+
+    }
+
+    .navbar img {
+      overflow: hidden;
+      height: 7vh;
+      width: 7vw;
+      margin-left: 0.5vw;
+      opacity: 0.9;
+      z-index: 1;
+      /* background-color: white; */
+    }
+
+    .navbar a {
+      /* float:left; */
+      font: 16px "Titillium web", sans-serif;
+      font-weight: 500;
+      /* font-size:2vh; */
+      /* font-weight: 600; */
+      color: #fff;
+      text-align: center;
+      padding: 19px 3px;
+      text-decoration: none;
+      z-index: 1;
+    }
+
+    .dropdown {
+
+      /* float: right; */
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font: 16px "Titillium web", sans-serif;
+      font-weight: 500;
+      color: #fff;
+      /* font-size:2vh;
+    font-weight: 600; */
+      z-index: 1;
+      border: none;
+      outline: none;
+      /* color: rgb(50, 48, 48); */
+      padding: 19px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: white;
+      color: blue;
+      border-radius: 2px;
+    }
+
+    .dropdown-content {
+      display: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      position: absolute;
+      background: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      /*opacity: 0.7; */
+    }
+
+    .dropdown-main a {
+      float: none;
+      color: blue;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+      color: #01263c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-main {
+      display: flex;
+      height: 50vh;
+      width: 100%;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+
+    div img {
+      width: 100%;
+      height: 20vh;
+      /* object-fit: contain; */
+    }
+
+    h1 {
+      font-weight: 200;
+      color: rgb(53, 53, 53);
+      font-size: 4vh;
+      border-bottom: 1px solid black;
+      padding-left: 15.2vw;
+    }
+
+    div h2,
+    h3 {
+      /* border-top:2px solid black ; */
+      padding-top: 1vh;
+      font-weight: 500;
+      width: 70%;
+      text-align: start;
+      margin: auto;
+
+    }
+
+    h2 {
+      color: red;
+    }
+
+    div p {
+      padding: 1vh 0 1vh 0;
+      text-align: start;
+      width: 70%;
+      line-height: 3vh;
+      margin: auto;
+    }
+
+    footer {
+      /* margin-top: 2vh; */
+      text-align: center;
+      background-color: #01263c;
+      color: #ddd;
+    }
+
+    footer div {
+      font-size: 15px;
+      font-weight: 500;
+      padding: 1vh 0;
+    }
+
+    .username {
+      position: absolute;
+      top: 0.5vh;
+      right: 10px;
+      gap: 5px;
+      color: turquoise;
+    }
+
+    .user-text {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="navbar">
+        <img src="asserts/image/logo.png" alt="logo">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">About us
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main" id="content"><a href="company_info.html">Company Information</a>
+              <a href="m&v.html">Mission & Vision</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Product & Services
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main">
+              <a href="Product.html">Products</a>
+              <a href="#link2">Link 2</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Research & Development
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main"> <a href="research.html">Research</a>
+              <a href="project.html">Projects</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Quality & Services
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main">
+              <a href="certification.html">Quality Standard</a>
+              <a href="#link2">Link 2</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Careers
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main">
+              <a href="job opening.html">Job Openings</a>
+              <a href="internship.html">Internship</a>
+              <a href="#link3">Link 3</a>
+              <a href="#link3">Link 4</a>
+              <a href="#link3">Link 5</a>
+              <a href="#link3">Link 6</a>
+              <a href="#link3">Link 7</a>
+              <a href="#link3">Link 8</a>
+            </div>
+          </div>
+        </div>
+        <a href="staff_directory.html">Staff Directory</a>
+        <a href="gallery.html">Gallery</a>
+        <div class="dropdown">
+          <button class="dropbtn">Contact us
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-main">
+              <a href="customer.html">Customer Support</a>
+              <a href="location.html">HAL Factory Map</a>
+              <a href="complaint.html">Complaint Section</a>
+            </div>
+          </div>
+        </div>
+        <a href="index.html">Log out</a>
+        <div class="username">Username: <div class="user-text"></div>
+        </div>
+      </div>
+
+      <img src="asserts/image/15_header_Culture.jpg" alt="">
+      </div>
+    </header>
+    <section>
+      <h1>-: Culture :-</h1>
+      <div>
+        <h2>Our Visison</h2>
+
+        <p>To be global leader in the Aerospace & Defence Industry.</p>
+      </div>
+      <div>
+        <h2>Our Mission</h2>
+        <p>We are committed to deliver superior technology solutions to the the customers by leveraging our
+          infrastructure and Design, Manufacturing & Services skills, for achieving business excellence. </p>
+      </div>
+
+      <div>
+        <h2>Our Values</h2>
+        <h3>Customer Satisfaction</h3>
+        <p> We are dedicated to building a relationship with our customers where we become partners in
+          fulfilling their mission. We strive to understand our customers' needs and to deliver products and
+          services that fulfill and exceed all their requirement</p>
+
+        <h3>Commitment to total quality</h3>
+        <p>We are committed to continuous improvement of all our activities. We will supply products and
+          services that conform to highest standards of design, manufacture, reliability, maintainability and
+          fitness for use as desired by our customers</p>
+
+        <h3>Cost and time consciousness</h3>
+        <p>We believe that our success depends on our ability to continually reduce the cost and shorten the
+          delivery period of our products and services. We will achieve this by eliminating waste in all
+          activities and continuously improving all processes in every area of our work.</p>
+
+        <h3>Innovation and creativity</h3>
+        <p>We believe in striving for improvement in every activity involved in our business by pursuing and
+          encouraging risk-taking, experimentation and learning at all levels within the company with a view
+          to achieving excellence and competitiveness.</p>
+
+        <h3>Trust and team spirit</h3>
+        <p>We believe in achieving harmony in work life through mutual trust, transparency, co-operation and a
+          sense of belonging. We will strive for building empowered teams to work towards achieving
+          organisational goals.</p>
+
+        <h3>
+          Respect for the individual</h3>
+        <p>We value our people. We will treat each other with dignity and respect and strive for individual
+          growth and realisation of everyone's full potential.</p>
+
+        <h3>Integrity</h3>
+        <p>We believe in a commitment to be honest, trustworthy and fair in all our dealings. We commit to be
+          loyal and devoted to our organisation. We will practise self discipline and own responsibility for
+          our actions. We will comply with all requirements so as to ensure that our organisation is always
+          worthy of trust.</p>
+      </div>
+
+
+    </section>
+
+
+    <footer>
+      <div>&copy; HAL Avionics Korwa</div>
+    </footer>
+
+  </main>
+  <script>
+    let user = document.querySelector('.username');
+    let user1 = document.querySelector('.user-text');
+    user.style.display = "flex"
+    user1.textContent = "Sagar";
+  </script>
+</body>
+
+</html>

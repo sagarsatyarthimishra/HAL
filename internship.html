@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Openings</title>
+  <style>
+    body {
+      background-color: #fdfafa;
+      margin: 0;
+      text-align: center;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-around;
+      gap: 0.8vw;
+      align-items: flex-start;
+      /* position:relative; */
+      height: 7.9vh;
+      /* border: 1px solid black; */
+      /* top:5px; */
+      padding: 1vh 0;
+      /* background-color: #d5d5db; */
+      background-color: #01263c;
+
+    }
+
+    .navbar img {
+      overflow: hidden;
+      height: 7vh;
+      width: 7vw;
+      margin-left: 0.5vw;
+      opacity: 0.9;
+      z-index: 1;
+      /* background-color: white; */
+    }
+
+    .navbar a {
+      /* float:left; */
+      font: 16px "Titillium web", sans-serif;
+      font-weight: 500;
+      /* font-size:2vh; */
+      /* font-weight: 600; */
+      color: #fff;
+      text-align: center;
+      padding: 19px 3px;
+      text-decoration: none;
+      z-index: 1;
+    }
+
+    .dropdown {
+
+      /* float: right; */
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font: 16px "Titillium web", sans-serif;
+      font-weight: 500;
+      color: #fff;
+      /* font-size:2vh;
+    font-weight: 600; */
+      z-index: 1;
+      border: none;
+      outline: none;
+      /* color: rgb(50, 48, 48); */
+      padding: 19px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: white;
+      color: blue;
+      border-radius: 2px;
+    }
+
+    .dropdown-content {
+      display: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      position: absolute;
+      background: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      /*opacity: 0.7; */
+    }
+
+    .dropdown-main a {
+      float: none;
+      color: blue;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+      color: #01263c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-main {
+      display: flex;
+      height: 50vh;
+      width: 100%;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .internship-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .internship {
+      display: flex;
+      background-color: #c8cefc;
+      border: 1px solid #ff0000;
+      border-radius: 8px;
+      width: 99%;
+      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .internship img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .details {
+      padding: 10px;
+      flex: 1;
+    }
+
+    .details h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+    }
+
+    .details p {
+      margin: 10px 0;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: #fbf9f9;
+      border: #007BFF 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 40px;
+    }
+
+    button:hover {
+      background-color: #fe0202;
+    }
+
+    footer {
+      /* margin-top: 2vh; */
+      text-align: center;
+      background-color: #01263c;
+      color: #ddd;
+    }
+
+    footer div {
+      font-size: 15px;
+      font-weight: 500;
+      padding: 1vh 0;
+    }
+
+    .username {
+      position: absolute;
+      top: 0.5vh;
+      right: 10px;
+      gap: 5px;
+      color: turquoise;
+    }
+
+    .user-text {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <img src="asserts/image/logo.png" alt="logo">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">About us
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <div class="dropdown-main" id="content"><a href="company_info.html">Company Information</a>
+          <a href="m&v.html">Mission & Vision</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Product & Services
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <div class="dropdown-main">
+          <a href="Product.html">Products</a>
+          <a href="#link2">Link 2</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Research & Development
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <div class="dropdown-main"> <a href="research.html">Research</a>
+          <a href="project.html">Projects</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Quality & Services
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <div class="dropdown-main">
+          <a href="certification.html">Quality Standard</a>
+          <a href="#link2">Link 2</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 3</a>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Careers
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <div class="dropdown-main">
+          <a href="job opening.html">Job Openings</a>
+          <a href="internship.html">Internship</a>
+          <a href="#link3">Link 3</a>
+          <a href="#link3">Link 4</a>
+          <a href="#link3">Link 5</a>
+          <a href="#link3">Link 6</a>
+          <a href="#link3">Link 7</a>
+          <a href="#link3">Link 8</a>
+        </div>
+      </div>
+    </div>
+    <a href="staff_directory.html">Staff Directory</a>
+    <a href="gallery.html">Gallery</a>
+    <div class="dropdown">
+      <button class="dropbtn">Contact us
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <div class="dropdown-main">
+          <a href="customer.html">Customer Support</a>
+          <a href="location.html">HAL Factory Map</a>
+          <a href="complaint.html">Complaint Section</a>
+        </div>
+      </div>
+    </div>
+    <a href="index.html">Log out</a>
+    <div class="username">Username: <div class="user-text"></div>
+    </div>
+  </div>
+  <h1>Internship Openings</h1>
+  <div class="internship-container">
+    <div class="internship">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxuQnaZFjctf_rXv5jFUdLS9TDyZPOCk9J8w&s"
+        alt="Marketing Internship">
+      <div class="details">
+        <h2>Marketing Intern</h2>
+        <p><strong>Location:</strong> New Delhi</p>
+        <p><strong>Duration:</strong> 6 months</p>
+        <p><strong>Description:</strong> Assist in developing marketing strategies, conducting market
+          research, and managing social media channels.</p>
+        <a href="file intern.html"><button>Apply Now</button></a>
+      </div>
+    </div>
+    <div class="internship">
+      <img src="asserts/image/Software engineering.jpeg.jpg" alt="Software Engineering Internship">
+      <div class="details">
+        <h2>Software Engineering Intern</h2>
+        <p><strong>Location:</strong> Bengluru</p>
+        <p><strong>Duration:</strong> 3 months</p>
+        <p><strong>Description:</strong> Work with the development team to design, develop, and test
+          software applications.</p>
+        <a href="file intern.html"><button>Apply Now</button></a>
+      </div>
+    </div>
+    <div class="internship">
+      <img src="asserts/image/Design.jpeg.jpg" alt="Design Internship">
+      <div class="details">
+        <h2>Design Intern</h2>
+        <p><strong>Location:</strong>Lucknow</p>
+        <p><strong>Duration:</strong> 4 months</p>
+        <p><strong>Description:</strong> Collaborate with the design team to create visual content for
+          marketing and product design.</p>
+        <a href="file intern.html"><button>Apply Now</button></a>
+      </div>
+    </div>
+    <div class="internship">
+      <img src="asserts/image/Human Resource.jpeg.jpg" alt="Human Resources Internship">
+      <div class="details">
+        <h2>Human Resources Intern</h2>
+        <p><strong>Location:</strong>Mumbai</p>
+        <p><strong>Duration:</strong> 5 months</p>
+        <p><strong>Description:</strong> Support HR functions including recruitment, employee relations, and
+          training programs.</p>
+        <a href="file intern.html"><button>Apply Now</button></a>
+      </div>
+    </div>
+    <div class="internship">
+      <img src="asserts/image/Finance.jpeg.jpg" alt="Finance Internship">
+      <div class="details">
+        <h2>Finance Intern</h2>
+        <p><strong>Location:</strong>Kanpur</p>
+        <p><strong>Duration:</strong> 6 months</p>
+        <p><strong>Description:</strong> Assist in financial analysis, budgeting, and preparing financial
+          reports.</p>
+        <a href="file intern.html"><button>Apply Now</button></a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div>&copy; HAL Avionics Korwa </div>
+  </footer>
+  <script>
+    let user = document.querySelector('.username');
+    let user1 = document.querySelector('.user-text');
+    user.style.display = "flex"
+    user1.textContent = "Sagar";
+  </script>
+</body>
+
+</html>

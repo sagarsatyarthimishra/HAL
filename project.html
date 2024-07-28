@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+
+    }
+
+    .navbar {
+        overflow: hidden;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-around;
+        gap: 0.8vw;
+        align-items: flex-start;
+        /* position:relative; */
+        height: 7.9vh;
+        /* border: 1px solid black; */
+        /* top:5px; */
+        padding: 1vh 0;
+        /* background-color: #d5d5db; */
+        background-color: #01263c;
+
+    }
+
+    .navbar img {
+        overflow: hidden;
+        height: 7vh;
+        width: 7vw;
+        margin-left: 0.5vw;
+        opacity: 0.9;
+        z-index: 1;
+        /* background-color: white; */
+    }
+
+    .navbar a {
+        /* float:left; */
+        font: 16px "Titillium web", sans-serif;
+        font-weight: 500;
+        /* font-size:2vh; */
+        /* font-weight: 600; */
+        color: #fff;
+        text-align: center;
+        padding: 19px 3px;
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    .dropdown {
+
+        /* float: right; */
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+        font: 16px "Titillium web", sans-serif;
+        font-weight: 500;
+        color: #fff;
+        /* font-size:2vh;
+    font-weight: 600; */
+        z-index: 1;
+        border: none;
+        outline: none;
+        /* color: rgb(50, 48, 48); */
+        padding: 19px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: white;
+        color: blue;
+        border-radius: 2px;
+    }
+
+    .dropdown-content {
+        display: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        position: absolute;
+        background: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        /*opacity: 0.7; */
+    }
+
+    .dropdown-main a {
+        float: none;
+        color: blue;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        color: #01263c;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-main {
+        display: flex;
+        height: 50vh;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+
+    .c1 {
+        font-family: 'Roboto', sans-serif;
+        text-align: start;
+        padding: 0% 10%;
+    }
+
+    .c1 img {
+        height: 50%;
+        width: 60%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 1vh 0;
+        box-shadow: #ddd 10px 10px 50px 2px;
+    }
+
+    footer {
+        /* margin-top: 2vh; */
+        text-align: center;
+        background-color: #01263c;
+        color: #ddd;
+    }
+
+    footer div {
+        font-size: 15px;
+        font-weight: 500;
+        padding: 1vh 0;
+    }
+
+    .username {
+        position: absolute;
+        top: 0.5vh;
+        right: 10px;
+        gap: 5px;
+        color: turquoise;
+    }
+
+    .user-text {
+        color: white;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="navbar">
+            <img src="asserts/image/logo.png" alt="logo">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">About us
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main" id="content"><a href="company_info.html">Company Information</a>
+                        <a href="m&v.html">Mission & Vision</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Product & Services
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="Product.html">Products</a>
+                        <a href="#link2">Link 2</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Research & Development
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main"> <a href="research.html">Research</a>
+                        <a href="project.html">Projects</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Quality & Services
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="certification.html">Quality Standard</a>
+                        <a href="#link2">Link 2</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Careers
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="job opening.html">Job Openings</a>
+                        <a href="internship.html">Internship</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 4</a>
+                        <a href="#link3">Link 5</a>
+                        <a href="#link3">Link 6</a>
+                        <a href="#link3">Link 7</a>
+                        <a href="#link3">Link 8</a>
+                    </div>
+                </div>
+            </div>
+            <a href="staff_directory.html">Staff Directory</a>
+            <a href="gallery.html">Gallery</a>
+            <div class="dropdown">
+                <button class="dropbtn">Contact us
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="customer.html">Customer Support</a>
+                        <a href="location.html">HAL Factory Map</a>
+                        <a href="complaint.html">Complaint Section</a>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html">Log out</a>
+            <div class="username">Username: <div class="user-text"></div>
+            </div>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="c1">
+            <h1>Future Projects Of HAL</h1>
+            <p>HAL is shifting its focus from licensed production to the development of its own indigenous products.
+                This includes the Tejas fighter aircraft, various types of helicopters, and the design and development
+                of new helicopters and fighter aircraft. These projects are expected to provide a strong pipeline of
+                work for HAL until the end of the decade.</p>
+        </div>
+
+        <div class="c1">
+            <ul>
+                <li>Tejas Aircraft: It received clearance for induction into the Indian Air Force in 2019, which
+                    represents a major milestone for HAL.
+                    <ul>
+                        <li> The company is set to deliver the remaining eight of the 40 Tejas aircraft ordered by the
+                            Indian Air Force.</li>
+                        <li>HAL has planned to manufacture 83 Tejas Mk 1A aircraft, with an ambitious target of
+                            inducting the Tejas Mk2 by 2028.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li>Helicopters: HAL has developed helicopters such as Dhruv, Rudra, and Prachand.
+                    <ul>
+                        <li>The Prachand helicopter is expected to replace the ageing Cheetah and Chetak helicopters.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li>Collaborations: HAL is actively pursuing collaborations with foreign original equipment
+                    manufacturers (OEMs) to enhance its capabilities and technology base.
+                    <ul>
+                        <li>Initiatives like the Combat Air Teaming System (CATS), which combines manned and unmanned
+                            aircraft, showcase HAL's commitment to innovation in future.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="c1">
+            <h1>Global Collaborations of HAL</h1>
+            <p>Hindustan Aeronautics Limited (HAL) has signed several MoUs and agreements with Global Aerospace firms,
+                such as</p>
+
+
+            <ul>
+                <li>MoU with Argentina: A memorandum of understanding with its Argentina counterpart Fabrica Argentina
+                    de Aviones (FAdeA) for possible collaboration in the aerospace sector. <ul>
+                        <li>HAL is in talks with Argentina to export the indigenously-built light combat aircraft (LCA)
+                            amid India’s push to gain a toehold in foreign defence markets.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    MoU with the USA: GE and HAL signed a memorandum of understanding in Washington to produce 99 F414
+                    engines for India’s light combat aircraft (LCA) Mk-2 program. <ul>
+                        <li>The deal involves an 80% transfer of technology (ToT) and is estimated to be worth around $1
+                            billion.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li>MoU with France: HAL and Safran Aircraft Engines (French aerospace company) signed a MoU to develop
+                    industrial cooperation in Ring forging manufacturing for commercial engines. <ul>
+                        <li>HAL will produce a LEAP (Leading Edge Aviation Propulsion) engine in Bengaluru as part of
+                            the MoU.</li>
+                    </ul>
+                </li>
+            </ul>
+            <img src="asserts/image/bigger_market_capitalisation_of_hal_1f6390b984.webp" alt="">
+        </div>
+
+        <div class="c1">
+            <h1>Measures to be taken in Future</h1>
+            <p>The following are the steps that can be taken to enhance the efficiency of HAL:</p>
+            <ul>
+                <li>Focus on R&D: There is a need to continuously invest to facilitate the development of
+                    state-of-the-art technology and innovative solutions.
+                    <ul>
+                        <li>Private sector involvement can be a game-changer in this area.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li>Collaborations: Through building more partnerships with international aerospace firms like Dassault
+                    Aviation, Boeing, etc., HAL can be facilitated by technology transfer and knowledge exchange. <ul>
+                        <li>This would also enhance the overall professionalism and efficiency within the organisation.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>Academic research: <ul>
+                        <li>There should be an inculcation of the curriculum of Defence Technology in the premier
+                            institutes like IITs, NITs, etc.</li>
+                        <li>There is a need to have dedicated institutes for Defence Technology just as there is IIST
+                            for Space Technology.</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>Global Market Expansion: Increasing exports and actively pursuing export opportunities for HAL's
+                    products and services can increase revenues for HAL.
+                    <ul>
+                        <li>For example, Argentina, Egypt, and the Philippines showed interest in HAL’s Light Combat
+                            Aircraft (LCA) Tejas.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            <div>&copy; HAL Avionics Korwa </div>
+        </footer>
+    </section>
+    <script>
+        let user = document.querySelector('.username');
+        let user1 = document.querySelector('.user-text');
+        user.style.display = "flex"
+        user1.textContent = "Sagar";
+    </script>
+</body>
+
+</html>

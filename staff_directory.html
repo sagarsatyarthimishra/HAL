@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Directory</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-around;
+            gap: 0.8vw;
+            align-items: flex-start;
+            /* position:relative; */
+            height: 7.9vh;
+            /* border: 1px solid black; */
+            /* top:5px; */
+            padding: 1vh 0;
+            /* background-color: #d5d5db; */
+            background-color: #01263c;
+
+        }
+
+        .navbar img {
+            overflow: hidden;
+            height: 7vh;
+            width: 7vw;
+            margin-left: 0.5vw;
+            opacity: 0.9;
+            z-index: 1;
+            /* background-color: white; */
+        }
+
+        .navbar a {
+            /* float:left; */
+            font: 16px "Titillium web", sans-serif;
+            font-weight: 500;
+            /* font-size:2vh; */
+            /* font-weight: 600; */
+            color: #fff;
+            text-align: center;
+            padding: 19px 3px;
+            text-decoration: none;
+            z-index: 1;
+        }
+
+        .dropdown {
+
+            /* float: right; */
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font: 16px "Titillium web", sans-serif;
+            font-weight: 500;
+            color: #fff;
+            /* font-size:2vh;
+    font-weight: 600; */
+            z-index: 1;
+            border: none;
+            outline: none;
+            /* color: rgb(50, 48, 48); */
+            padding: 19px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: white;
+            color: blue;
+            border-radius: 2px;
+        }
+
+        .dropdown-content {
+            display: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            position: absolute;
+            background: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            /*opacity: 0.7; */
+        }
+
+        .dropdown-main a {
+            float: none;
+            color: blue;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: #01263c;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-main {
+            display: flex;
+            height: 50vh;
+            width: 100%;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+
+        footer {
+            /* margin-top: 2vh; */
+            text-align: center;
+            background-color: #01263c;
+            color: #ddd;
+        }
+
+        footer div {
+            font-size: 15px;
+            font-weight: 500;
+            padding: 1vh 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            cursor: pointer;
+            flex: 1 0 calc(50% - 20px);
+            margin: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card:hover {
+            background-color: #e0e0e0;
+        }
+
+        .card-content {
+            text-align: center;
+        }
+
+        .card-title {
+            margin: 0;
+            color: #333;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .staff-details {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: #555;
+        }
+
+        .close-btn:hover {
+            color: #333;
+        }
+
+        .staff-details img {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .username {
+            position: absolute;
+            top: 0.5vh;
+            right: 10px;
+            gap: 5px;
+            color: turquoise;
+        }
+
+        .user-text {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <img src="asserts/image/logo.png" alt="logo">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">About us
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main" id="content"><a href="company_info.html">Company Information</a>
+                        <a href="m&v.html">Mission & Vision</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Product & Services
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="Product.html">Products</a>
+                        <a href="#link2">Link 2</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Research & Development
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main"> <a href="research.html">Research</a>
+                        <a href="project.html">Projects</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Quality & Services
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="certification.html">Quality Standard</a>
+                        <a href="#link2">Link 2</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Careers
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="job opening.html">Job Openings</a>
+                        <a href="internship.html">Internship</a>
+                        <a href="#link3">Link 3</a>
+                        <a href="#link3">Link 4</a>
+                        <a href="#link3">Link 5</a>
+                        <a href="#link3">Link 6</a>
+                        <a href="#link3">Link 7</a>
+                        <a href="#link3">Link 8</a>
+                    </div>
+                </div>
+            </div>
+            <a href="staff_directory.html">Staff Directory</a>
+            <a href="gallery.html">Gallery</a>
+            <div class="dropdown">
+                <button class="dropbtn">Contact us
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-main">
+                        <a href="customer.html">Customer Support</a>
+                        <a href="location.html">HAL Factory Map</a>
+                        <a href="complaint.html">Complaint Section</a>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html">Log out</a>
+            <div class="username">Username: <div class="user-text"></div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="section" id="permanent">
+            <h2 class="section-title">Permanent Staff</h2>
+            <div class="card-container" id="permanent-cards">
+                <div class="card" data-name="John Doe" data-photo="john.jpg" data-pb-number="PB001"
+                    data-department="Administration">
+                    <div class="card-content">
+                        <h3 class="card-title">John Doe</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Jane Smith" data-photo="jane.jpg" data-pb-number="PB002"
+                    data-department="Finance">
+                    <div class="card-content">
+                        <h3 class="card-title">Jane Smith</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Jane Smith" data-photo="jane.jpg" data-pb-number="PB002"
+                    data-department="Finance">
+                    <div class="card-content">
+                        <h3 class="card-title">Jane Smith</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Jane Smith" data-photo="jane.jpg" data-pb-number="PB002"
+                    data-department="Finance">
+                    <div class="card-content">
+                        <h3 class="card-title">Jane Smith</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Jane Smith" data-photo="jane.jpg" data-pb-number="PB002"
+                    data-department="Finance">
+                    <div class="card-content">
+                        <h3 class="card-title">Jane Smith</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="casual">
+            <h2 class="section-title">Casual Staff</h2>
+            <div class="card-container" id="casual-cards">
+                <div class="card" data-name="Mark Johnson" data-photo="mark.jpg" data-pb-number="PB101"
+                    data-department="Sales">
+                    <div class="card-content">
+                        <h3 class="card-title">Mark Johnson</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Emma Brown" data-photo="emma.jpg" data-pb-number="PB102"
+                    data-department="Marketing">
+                    <div class="card-content">
+                        <h3 class="card-title">Emma Brown</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Emma Brown" data-photo="emma.jpg" data-pb-number="PB102"
+                    data-department="Marketing">
+                    <div class="card-content">
+                        <h3 class="card-title">Emma Brown</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Emma Brown" data-photo="emma.jpg" data-pb-number="PB102"
+                    data-department="Marketing">
+                    <div class="card-content">
+                        <h3 class="card-title">Emma Brown</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Emma Brown" data-photo="emma.jpg" data-pb-number="PB102"
+                    data-department="Marketing">
+                    <div class="card-content">
+                        <h3 class="card-title">Emma Brown</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="apprentice">
+            <h2 class="section-title">Apprentice Staff</h2>
+            <div class="card-container" id="apprentice-cards">
+                <div class="card" data-name="Michael Lee" data-photo="michael.jpg" data-pb-number="PB201"
+                    data-department="Engineering">
+                    <div class="card-content">
+                        <h3 class="card-title">Michael Lee</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Sophie Davis" data-photo="sophie.jpg" data-pb-number="PB202"
+                    data-department="IT">
+                    <div class="card-content">
+                        <h3 class="card-title">Sophie Davis</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Sophie Davis" data-photo="sophie.jpg" data-pb-number="PB202"
+                    data-department="IT">
+                    <div class="card-content">
+                        <h3 class="card-title">Sophie Davis</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Sophie Davis" data-photo="sophie.jpg" data-pb-number="PB202"
+                    data-department="IT">
+                    <div class="card-content">
+                        <h3 class="card-title">Sophie Davis</h3>
+                    </div>
+                </div>
+                <div class="card" data-name="Sophie Davis" data-photo="sophie.jpg" data-pb-number="PB202"
+                    data-department="IT">
+                    <div class="card-content">
+                        <h3 class="card-title">Sophie Davis</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="staff-details" id="staff-details">
+            <button class="close-btn" id="close-btn">&times;</button>
+            <h2 id="details-name"></h2>
+            <div id="details-photo"></div>
+            <p><strong>PB Number:</strong> <span id="details-pb-number"></span></p>
+            <p><strong>Department:</strong> <span id="details-department"></span></p>
+        </div>
+    </div>
+
+    <script src="asserts/staff.js"></script>
+    <footer>
+        <div>&copy; HAL Avionics Korwa </div>
+    </footer>
+    <script>
+        let user = document.querySelector('.username');
+        let user1 = document.querySelector('.user-text');
+        user.style.display = "flex"
+        user1.textContent = "Sagar";
+    </script>
+</body>
+
+</html>
